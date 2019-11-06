@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="cascade" extends="struts-default" namespace="/cascade">
+        <action name="showProvince" class="com.baizhi.action.ProvinceAction" method="showProvince"></action>
+        <action name="showCitys" class="com.baizhi.action.ProvinceAction" method="showCitys"></action>
+        <action name="showAreas" class="com.baizhi.action.ProvinceAction" method="showAreas"></action>
+        <action name="login" class="com.baizhi.action.UserAction" method="login">
+            <result name="login" type="redirectAction">AllPj</result>
+            <result name="sb">/login.jsp</result>
+        </action>
+        <action name="AllPj" class="com.baizhi.action.UserAction" method="AllPj">
+            <result name="all">/pingj.jsp</result>
+        </action>
+        <action name="add" class="com.baizhi.action.UserAction" method="add">
+
+        </action>
+        <action name="update" class="com.baizhi.action.UserAction" method="update"></action>
+    </package>
+
+
+
+
+</struts>

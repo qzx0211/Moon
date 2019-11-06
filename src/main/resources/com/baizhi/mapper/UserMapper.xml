@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baizhi.dao.UserDao">
+    <select id="selectOne" resultType="User">
+        select * from p_user where name=#{name}
+    </select>
+    <select id="selectPj" resultType="Pj">
+        select * from pjb
+    </select>
+    <insert id="addPj" >
+        insert into pjb values (#{pid},#{text},#{uname},#{count})
+    </insert>
+    <update id="update">
+        update pjb set count =#{count} where pid=#{pid}
+    </update>
+    <select id="selectPjOne" resultType="Pj">
+        select * from pjb where pid=#{pid}
+    </select>
+</mapper>
